@@ -10,18 +10,22 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     String s = new String("abc");
-    View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
 
-        }
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button bHelp = (Button) findViewById(R.id.b_info);
-        bHelp.setOnClickListener(listener);
+        bHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("BMI說明")
+                        .setMessage("身高體重指數（又稱身體質量指數，英文為Body Mass Index，簡稱BMI）是一個計算值，主要用於統計用途。")
+                        .setPositiveButton("OK",null)
+                        .show();
+            }
+        });
     }
 
     public void bmi (View view){

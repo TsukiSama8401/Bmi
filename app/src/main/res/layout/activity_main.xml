@@ -7,10 +7,10 @@
     tools:context="com.hu.bmi6.MainActivity">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weight"
+        android:text="@string/weight"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -24,15 +24,15 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
         tools:layout_editor_absoluteX="-3dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:text="Height"
+        android:text="@string/height"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintTop_toBottomOf="@+id/ed_weight"
         tools:layout_editor_absoluteX="0dp" />
@@ -44,16 +44,26 @@
         android:layout_marginTop="0dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/height"
         tools:layout_editor_absoluteX="-2dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/b_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:onClick="bmi"
-        android:text="CALCULATE"
+        android:text="@string/calculate"
         app:layout_constraintTop_toBottomOf="@+id/ed_height"
         tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/b_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_calculate" />
 </android.support.constraint.ConstraintLayout>

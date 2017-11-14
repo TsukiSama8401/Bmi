@@ -34,20 +34,30 @@ public class MainActivity extends AppCompatActivity {
         EditText height = (EditText) findViewById(R.id.ed_height);
         float w = Float.parseFloat(weight.getText().toString());
         float h  =Float.parseFloat(height.getText().toString());
-        float bmi = w / (h * h);
-        if (bmi < 20){
+        if (h >=3){
             new AlertDialog.Builder(this)
-                    .setMessage("your bmi is " + bmi + "請多吃點")
+                    .setMessage(R.string.error)
                     .setTitle(R.string.bmi)
-                    .setPositiveButton(R.string.ok,null)
+                    .setPositiveButton(R.string.ok , null)
                     .show();
+
         }else{
-            new AlertDialog.Builder(this)
-                    .setMessage("your bmi is " + bmi)
-                    .setTitle(R.string.bmi)
-                    .setPositiveButton(R.string.ok,null)
-                    .show();
+            float bmi = w / (h * h);
+            if (bmi < 20){
+                new AlertDialog.Builder(this)
+                        .setMessage("your bmi is " + bmi + "請多吃點")
+                        .setTitle(R.string.bmi)
+                        .setPositiveButton(R.string.ok,null)
+                        .show();
+            }else{
+                new AlertDialog.Builder(this)
+                        .setMessage("your bmi is " + bmi)
+                        .setTitle(R.string.bmi)
+                        .setPositiveButton(R.string.ok,null)
+                        .show();
+            }
         }
+
 
     }
 

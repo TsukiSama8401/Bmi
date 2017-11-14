@@ -7,5 +7,7 @@
     <string name="height">Height</string>
     <string name="calculate">CALCULATE</string>
     <string name="info">INFO</string>
+    <string name="error">身高單位應為公尺</string>
+    <string name="more">請多吃點</string>
 
 </resources>
